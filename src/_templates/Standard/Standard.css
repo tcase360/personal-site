@@ -9,3 +9,44 @@
     right: 0;
     left: 0;
 }
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  height: 60px;
+  padding-top: 10px;
+  padding-left: 40px;
+  position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.header > a {
+  position: relative;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+.header > a:after {
+  border-top: .3rem solid #FF8C00;
+  content: "";
+  position: absolute;
+    right: 0;
+    bottom: .9em;
+    left: 0;
+  transition: bottom 150ms ease-in;
+}
+
+.header > a:hover:after {
+  bottom: 0.8em;
+}
+
+@media (min-width: 760px) {
+  .header {
+    padding-left: 240px;
+  }
+}

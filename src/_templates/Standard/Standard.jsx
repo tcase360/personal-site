@@ -9,15 +9,13 @@ class StandardTemplate extends React.Component {
 
     return (
       <div className="standard-template">
-        <header className="header"></header>
+        <header className="header">
+          <a href="https://taylormcase.com">taylor case.</a>
+        </header>
 
-        <div className="body">
-          { children }
-        </div>
+        <div className="body">{children}</div>
 
-        <footer className="footer">
-          hello world
-        </footer>
+        <footer className="footer"></footer>
       </div>
     );
   }
