@@ -1,0 +1,10 @@
+p {
+  /* margin-top: -25px; */
+  opacity: 0;
+  transition: opacity 150ms ease-in, margin-top 150ms ease-in;
+}
+
+p.show {
+  /* margin-top: 0; */
+  opacity: 1;
+}
