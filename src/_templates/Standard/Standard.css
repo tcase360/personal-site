@@ -29,6 +29,18 @@
   font-weight: 700;
   color: white;
   text-decoration: none;
+  margin-top: 15px;
+  opacity: 0;
+  transition: opacity 150ms ease-in, margin-top 150ms ease-in;
+}
+
+.header > a.show {
+  opacity: 1;
+  margin-top: 0;
+}
+
+.header > a.show:after {
+  bottom: 0.9em;
 }
 
 .header > a:after {
@@ -36,7 +48,7 @@
   content: "";
   position: absolute;
     right: 0;
-    bottom: .9em;
+    bottom: 0.5em;
     left: 0;
   transition: bottom 150ms ease-in;
 }
