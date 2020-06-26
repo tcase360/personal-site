@@ -1,5 +1,9 @@
 import Head from 'next/head';
 
+import { Header, Description } from '../components/General';
+
+import RunningRange from '../components/running-range';
+
 export default function Home() {
   return (
     <div className="container">
@@ -8,13 +12,15 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className="title">
+        <Header>
           Hello, my name is Taylor.
-        </h1>
+        </Header>
 
-        <p className="description">
+        <Description>
           I'm a front-end engineer with a passion for running.
-        </p>
+        </Description>
+
+        <RunningRange />
       </main>
 
       <footer>
@@ -57,49 +63,6 @@ export default function Home() {
           display: flex;
           justify-content: center;
           align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-          font-family: mr-eaves-xl-modern, "Helvetica Neue", sans-serif;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-          font-family: "Georgia", sans-serif;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
         }
 
         .grid {
