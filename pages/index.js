@@ -20,12 +20,7 @@ export default function Home() {
           I'm a front-end engineer with a passion for running.
         </Description>
 
-        <RunningRange />
       </main>
-
-      <footer>
-        
-      </footer>
 
       <style jsx>{`
         .container {
