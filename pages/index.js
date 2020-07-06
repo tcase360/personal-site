@@ -77,7 +77,7 @@ export default function Home() {
           <Description>
             I'm a front-end engineer.
             <br />
-            I like to run, read learn and help others.
+            I like to run, read, learn and help others.
           </Description>
         </IntroSection>
       </Main>

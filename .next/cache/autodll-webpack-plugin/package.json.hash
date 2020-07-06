@@ -1,1 +1,0 @@
-{"name":"personal-website","version":"0.1.0","private":true,"scripts":{"dev":"next dev","build":"next build","start":"next start","export":"next export"},"dependencies":{"next":"9.4.4","react":"16.13.1","react-dom":"16.13.1","styled-components":"^5.1.1"},"readme":"ERROR: No README data found!","_id":"personal-website@0.1.0"}
