@@ -57,10 +57,10 @@ export default function Home() {
 
         <link href="https://fonts.googleapis.com/css2?family=Fjord+One&family=Roboto&display=swap" rel="stylesheet" />
 
-        <link rel="apple-touch-icon" sizes="180x180" href="favico_io/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="favico_io/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="favico_io/favicon-16x16.png" />
-        <link rel="manifest" href="favico_io/site.webmanifest" />
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png" />
+        <link rel="manifest" href="favicon_io/site.webmanifest" />
 
       </Head>
 
