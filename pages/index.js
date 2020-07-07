@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styled from 'styled-components';
 
+import Experience from '../components/Experience';
 import { Header, Description } from '../components/General';
 
 const background = '#191919';
@@ -38,11 +39,23 @@ const Main = styled.main`
 
   font-family: 'Fjord One', serif;
 
+  flex-direction: column;
   justify-content: center;
 `;
 
-const IntroSection = styled.section`
+const Section = styled.section`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
+  margin-bottom: 50px;
+`;
+
+const HR = styled.hr`
+  background-color: 1px solid #C4C4C4;
+  max-width: 700px;
+  width: 100%;
 `;
 
 const OrangeSpan = styled.span`
@@ -69,7 +82,7 @@ export default function Home() {
       </Navbar>
 
       <Main>
-        <IntroSection>
+        <Section>
           <Header>
             Hello, my name is <OrangeSpan>Taylor.</OrangeSpan>
           </Header>
@@ -79,7 +92,13 @@ export default function Home() {
             <br />
             I like to run, read, learn and help others.
           </Description>
-        </IntroSection>
+        </Section>
+
+        <HR />
+
+        <Section>
+          <Experience />
+        </Section>
       </Main>
 
       <style jsx global>{`
