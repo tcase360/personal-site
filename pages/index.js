@@ -1,8 +1,9 @@
 import Head from 'next/head';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 
 import Experience from '../components/Experience';
 import { Header, Description } from '../components/General';
+import theme from '../components/theme';
 
 const background = '#191919';
 const primaryOrange = '#FC5200';
@@ -21,12 +22,12 @@ const Navbar = styled.nav`
 `;
 
 const Container = styled.div`
-  background-color: ${background};
+  background-color: ${props => props.theme.color.background};
 `;
 
 const Logo = styled.a`
-  font-family: 'Fjord One', serif;
-  font-size: 48px;
+  font-family: ${props => props.theme.font.family.serif};
+  font-size: ${props => props.theme.font.size.mediumLarge};
   color: ${primaryOrange};
   
   text-decoration: none;
@@ -37,7 +38,7 @@ const Main = styled.main`
   margin-top: 170px;
   color: white;
 
-  font-family: 'Fjord One', serif;
+  font-family: ${props => props.theme.font.family.serif};
 
   flex-direction: column;
   justify-content: center;
@@ -64,61 +65,63 @@ const OrangeSpan = styled.span`
 
 export default function Home() {
   return (
-    <Container>
-      <Head>
-        <title>Taylor Case | Home</title>
+    <ThemeProvider theme={theme}>
+      <Container>
+        <Head>
+          <title>Taylor Case | Home</title>
 
-        <link href="https://fonts.googleapis.com/css2?family=Fjord+One&family=Roboto&display=swap" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css2?family=Fjord+One&family=Roboto&display=swap" rel="stylesheet" />
 
-        <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png" />
-        <link rel="manifest" href="favicon_io/site.webmanifest" />
+          <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png" />
+          <link rel="manifest" href="favicon_io/site.webmanifest" />
 
-      </Head>
+        </Head>
 
-      <Navbar>
-        <Logo href="/"><h2>T</h2></Logo>
-      </Navbar>
+        <Navbar>
+          <Logo href="/"><h2>T</h2></Logo>
+        </Navbar>
 
-      <Main>
-        <Section>
-          <Header>
-            Hello, my name is <OrangeSpan>Taylor.</OrangeSpan>
-          </Header>
+        <Main>
+          <Section>
+            <Header>
+              Hello, my name is <OrangeSpan>Taylor.</OrangeSpan>
+            </Header>
 
-          <Description>
-            I'm a front-end engineer.
-            <br />
-            I like to run, read, learn and help others.
-          </Description>
-        </Section>
+            <Description>
+              I'm a front-end engineer.
+              <br />
+              I like to run, read, learn and help others.
+            </Description>
+          </Section>
 
-        <HR />
+          <HR />
 
-        <Section>
-          <Experience />
-        </Section>
-      </Main>
+          <Section>
+            <Experience />
+          </Section>
+        </Main>
 
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: 'Fjord One', serif;
-          background-color: ${background}
-        }
+        <style jsx global>{`
+          html,
+          body {
+            padding: 0;
+            margin: 0;
+            font-family: 'Fjord One', serif;
+            background-color: ${theme.color.background}
+          }
 
-        *::selection {
-          color: white;
-          background: ${primaryOrange};
-        }
+          *::selection {
+            color: white;
+            background: ${theme.color.primary};
+          }
 
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </Container>
-  )
+          * {
+            box-sizing: border-box;
+          }
+        `}</style>
+      </Container>
+    </ThemeProvider>
+  );
 }

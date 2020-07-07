@@ -14,38 +14,37 @@ const ExperienceContainer = styled.div`
     width: 100%;
     max-width: 700px;
 
-    font-family: 'Roboto', sans-serif;
-
     @media (max-width: 700px) {
         flex-direction: column;
     }
 `;
 
 const CompanyColumn = styled.div`
+    font-family: ${props => props.theme.font.family.sansSerif};
     min-width: 180px;
-    background-color: ${backgroundColor};
+    background-color: ${props => props.theme.color.background};
     text-align: center;
 `;
 
 const Company = styled.button`
-    font-family: 'Fjord One', serif;
+    font-family: ${props => props.theme.font.family.serif};
     cursor: pointer;
-    color: ${props => props.active ? primaryOrange : 'white'};
+    color: ${props => props.active ? props.theme.color.primary : 'white'};
     font-size: 18px;
     line-height: 30px;
     width: 100%;
     max-width: 200px;
     background-color: transparent;
     border: none;
-    border-bottom: 2px solid ${props => props.active ? primaryOrange : 'white'};
-    border-right: 7px solid ${props => props.active ? primaryOrange : 'white'};
+    border-bottom: 2px solid ${props => props.active ? props.theme.color.primary : 'white'};
+    border-right: 7px solid ${props => props.active ? props.theme.color.primary : 'white'};
     padding: 0.5rem;
 
     transition: all 250ms ease-in;
 `;
 
 const DescriptionColumn = styled.div`
-    background-color: ${backgroundColor};
+    background-color: ${props => props.theme.color.background};
     width: 100%;
     text-align: center;
     padding: 0 1.5rem;
@@ -65,14 +64,13 @@ const DescriptionSection = styled.section`
 `;
 
 const DescriptionParagraph = styled.p`
-    font-family: 'Fjord One', serif;
     margin-top: 0;
     font-size: 16px;
     box-sizing: border-box;
 
     &::first-letter {
         font-size: 24px;
-        color: ${primaryOrange};
+        color: ${props => props.theme.color.primary};
     }
 `;
 // constants
