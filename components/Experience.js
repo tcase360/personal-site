@@ -12,7 +12,7 @@ const ExperienceContainer = styled.div`
     background-color: white;
 
     width: 100%;
-    height: 300px;
+    max-width: 700px;
 
     font-family: 'Roboto', sans-serif;
 
