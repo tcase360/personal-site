@@ -1,12 +1,11 @@
 import Head from 'next/head';
 import styled, { ThemeProvider } from 'styled-components';
+import { motion } from 'framer-motion';
 
-import Experience from '../components/Experience';
-import { Header, Description } from '../components/General';
 import theme from '../components/theme';
+import Experience from '../components/Experience';
 
-const background = '#191919';
-const primaryOrange = '#FC5200';
+import { Header, Description } from '../components/General';
 
 const Navbar = styled.nav`
   position: absolute;
@@ -21,14 +20,14 @@ const Navbar = styled.nav`
   justify-content: center;
 `;
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   background-color: ${props => props.theme.color.background};
 `;
 
 const Logo = styled.a`
   font-family: ${props => props.theme.font.family.serif};
   font-size: ${props => props.theme.font.size.mediumLarge};
-  color: ${primaryOrange};
+  color: ${props => props.theme.color.primary};
   
   text-decoration: none;
 `;
@@ -60,13 +59,38 @@ const HR = styled.hr`
 `;
 
 const OrangeSpan = styled.span`
-  color: ${primaryOrange};
+  color: ${props => props.theme.color.primary};
 `;
+
+/**
+ * const variants = {
+  visible: { opacity: 1 },
+  hidden: { opacity: 0 },
+}
+<motion.div variants={variants} />
+
+<motion.div
+  initial="hidden"
+  animate="visible"
+  variants={variants}
+/>
+ */
+
+const variants = {
+  visible: { opacity: 1 },
+  hidden: { opacity: 0 },
+};
+
+
 
 export default function Home() {
   return (
     <ThemeProvider theme={theme}>
-      <Container>
+      <Container
+        initial="hidden"
+        animate="visible"
+        variants={variants}
+      >
         <Head>
           <title>Taylor Case | Home</title>
 
