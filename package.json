@@ -16,6 +16,8 @@
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^2.0.6"
+    "@testing-library/react": "^12.1.4",
+    "babel-plugin-styled-components": "^2.0.6",
+    "jest": "^27.5.1"
   }
 }
