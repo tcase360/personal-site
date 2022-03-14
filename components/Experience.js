@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-const primaryOrange = '#FC5200';
-const backgroundColor = '#191919';
-
-
 const ExperienceContainer = styled.div`
     display: flex;
     flex-direction: row;
@@ -108,7 +104,7 @@ function Cloud4WiDescription() {
 }
 
 function Experience() {
-    const [ activeCompany, setActiveCompany ] = useState('shyft');
+    const [ activeCompany, setActiveCompany ] = useState(SHYFT);
     
     function changeActiveCompany(e) {
         setActiveCompany(e.target.value);
